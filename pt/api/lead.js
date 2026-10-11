@@ -1,6 +1,7 @@
 // Vercel serverless function — grava o lead no Notion "Applications"
 // (DB compartilhado por todos os Lead Magnets da Volcan).
 // Env necessárias: NOTION_API_KEY, NOTION_DATABASE_ID.
+// Só grave propriedades que existem no DB "Applications" — uma inexistente faz o Notion recusar tudo.
 // Sem dependências: usa a REST API do Notion via fetch (Node 18+ na Vercel).
 // Falha aqui nunca trava a pessoa — o front libera a entrega de qualquer forma.
 
@@ -19,7 +20,6 @@ export default async function handler(req, res) {
   const email = s(b.email);
   const telefone = s(b.phone || b.telefone);
   const empresa = s(b.business || b.empresa);
-  const modelo = s(b.model) || "não informado";
   const market = b.market === "EN" ? "EN" : "BR";
   const marketLabel = market === "EN" ? "🇺🇸 EN" : "🇧🇷 BR";
 
@@ -39,7 +39,6 @@ export default async function handler(req, res) {
     Company: { rich_text: [{ text: { content: empresa } }] },
     "Lead Magnet": { select: { name: "Modelos de Entrega" } },
     Market: { select: { name: marketLabel } },
-    Notes: { rich_text: [{ text: { content: `Modelo escolhido: ${modelo}` } }] },
   };
 
   try {
