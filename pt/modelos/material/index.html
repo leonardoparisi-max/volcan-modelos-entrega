@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Analisador de Calls | Modelo Volcan</title><meta name="description" content="Exemplo de isca que entrega um prompt para usar fora da página."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body><header class="nav"><div class="wrap"><a class="brand" href="#inicio">VOLCAN<span>.</span></a><small>Exemplo navegável · modelo de entrega</small></div></header><main id="inicio">
+<!-- MODELO 02: adapte o recurso, a instrução de uso, o exemplo de saída e a próxima etapa. -->
+<section class="hero"><div class="wrap hero__grid"><div><span class="eyebrow">Vendas / material usado fora da página</span><h1>Toda call que não fecha tem um motivo. <em>Descubra o seu.</em></h1><p>Copie o prompt, cole a transcrição da reunião no ChatGPT ou Claude e receba uma análise com evidências e uma correção para testar na próxima conversa.</p><a class="button" href="#prompt">Pegar o prompt grátis →</a><p class="hero__note">Exemplo baseado no Analisador de Calls da Volcan.</p></div><aside class="hero__visual"><span class="eyebrow">Exemplo de saída</span><b>A solução apareceu antes do diagnóstico.</b><p>“Vou te mostrar tudo que a plataforma faz. Depois a gente vê se encaixa.”</p><div class="stat">Problema <strong>4/10</strong> · Oferta <strong>3/10</strong></div><small class="muted">Exemplo ilustrativo; a análise real depende da transcrição.</small></aside></div></section>
+<section class="section" id="prompt"><div class="wrap"><span class="eyebrow">01 / Primeiro uso</span><h2>Faça uma análise agora.</h2><p class="lead">O recurso é o prompt. Ele está aqui, acessível antes de qualquer cadastro.</p><div class="steps"><article><b>01</b><h3>Pegue uma transcrição</h3><p>Use o texto de uma call recente do Meet, Zoom, Fireflies ou Fathom.</p></article><article><b>02</b><h3>Cole na sua IA</h3><p>Copie o prompt abaixo, substitua o trecho final pela transcrição e envie.</p></article><article><b>03</b><h3>Teste uma correção</h3><p>Escolha uma sugestão para a próxima conversa, sem mudar tudo de uma vez.</p></article></div><div class="panel"><span class="eyebrow">Recurso entregue</span><h3>Prompt de análise de calls</h3><p>Texto completo do recurso atual da Volcan.</p><button class="button" id="copyPrompt" type="button">Copiar prompt →</button><pre class="resource-pre" id="promptText">Você é um diretor comercial analisando uma transcrição de call. Seu trabalho é mostrar, com provas da conversa, o que ajudou ou atrapalhou o resultado e qual mudança testar na próxima call.
+
+Use três lentes: (1) venda diagnóstica de Leonardo Parisi/Volcan — entender situação atual, objetivo, restrição, consequência e tentativas anteriores antes de propor solução; (2) princípios de perguntas e prevenção de objeções do NEPQ de Jeremy Miner — ajudar o comprador a explicar com as próprias palavras o problema, o impacto e a razão para agir; (3) clareza de oferta e valor de Alex Hormozi — conectar resultado desejado, esforço, prazo, risco e próximo passo ao que o comprador realmente disse. São referências de análise, não um roteiro obrigatório nem uma alegação de parceria.
+
+Antes de pontuar, identifique se era uma call de descoberta, demonstração, diagnóstico, proposta, fechamento ou follow-up. Avalie o objetivo real dessa etapa. Não penalize uma descoberta por não apresentar preço, nem uma demonstração por não repetir todo o diagnóstico se o contexto já estiver claro.
+
+REGRAS
+- Não invente fatos, intenção, emoção, tom de voz, linguagem corporal ou números ausentes da transcrição. Se houver apenas texto, não avalie tonalidade.
+- Separe evidência (fala curta e exata), interpretação e hipótese. Se não houver base para uma nota ou motivo, escreva “não dá para saber”.
+- Analise a sequência: quando surgir uma objeção, procure também o momento anterior em que a dúvida poderia ter sido descoberta. Não conclua que toda objeção foi causada pelo vendedor.
+- Diferencie execução da call, qualificação do lead, clareza da oferta, timing e possível desalinhamento na mensagem que trouxe o lead. Uma call sugere hipóteses; padrão de marketing exige várias calls.
+- Não copie frases prontas de especialistas. Escreva perguntas novas, naturais e adequadas ao negócio da transcrição. Evite pressão artificial, escassez inventada e promessas sem prova.
+
+ENTREGUE NESTA ORDEM
+1. VEREDITO EM UMA FRASE: o que mais provavelmente explicou o resultado, com grau de confiança alto, médio ou baixo.
+2. O QUE ACONTECEU: 3 a 5 momentos decisivos na ordem em que surgiram; para cada um, uma fala curta e o efeito provável.
+3. TRÊS NOTAS para registrar na planilha, de 0 a 10, ou “não dá para saber”:
+   - Entendimento do problema (Macro): situação atual, meta, restrição, consequência de não mudar, tentativas anteriores e motivo para agir agora; dê crédito ao que já estava estabelecido em calls anteriores quando a transcrição disser isso.
+   - Condução da conversa (Micro): perguntas de aprofundamento, escuta, confirmação do entendimento, espaço para o comprador pensar em voz alta e dúvidas identificadas antes do fim.
+   - Apresentação da oferta (Oferta): relação entre solução e necessidade, resultado esperado, caminho para chegar lá, esforço/risco, critérios de decisão e próximo passo. Não exija garantia quando não fizer sentido.
+   Para cada nota, cite uma evidência positiva e uma lacuna específica. Não dê nota apenas porque a venda não fechou.
+4. ONDE A CALL PERDEU FORÇA: a primeira virada relevante, com citação; explique por que ela importa. Se a call fechou ou não houve virada comprovada, diga isso.
+5. MOTIVO PRINCIPAL PARA A PLANILHA: escolha exatamente um — “Sem orçamento / abaixo do ticket”, “Não era o decisor”, “Não entendeu ou não acreditou na oferta”, “Sem urgência”, “Objeção específica não resolvida”, “Timing”, “Desqualificado” ou “Fechou”. Se nenhuma opção for sustentada, deixe a célula Disposição em branco e diga o dado que falta em Onde quebrou. Distinga a objeção dita da provável causa; não trate a causa provável como fato.
+6. PRÓXIMA CALL: uma mudança de maior impacto, uma pergunta natural que o vendedor poderia fazer e em que momento usá-la. Se o melhor próximo passo for follow-up, diga qual contexto retomar e o que precisa ser decidido.
+7. SINAL PARA O TIME: o que vale observar nas próximas calls sobre qualificação, conteúdo antes da reunião ou oferta. Rotule como hipótese até haver repetição.
+
+LINHA PARA A ABA LOG DA PLANILHA
+Entregue uma única linha TSV em bloco de código, sem cabeçalho, com estas colunas separadas por tabulações, exatamente nesta ordem, para colar na primeira linha vazia da aba LOG (a partir de A5): Data | Vendedor | Lead / empresa | Resultado | Ticket (R$) | Nota Macro | Nota Micro | Nota Oferta | Disposição | Onde quebrou | Maior qualidade | Correção aplicada? | Follow-up feito?. Data no formato AAAA-MM-DD; Ticket e notas como números, sem R$ ou /10.
+Use apenas dados explícitos da transcrição. Em Resultado, use “Fechou”, “Não fechou” ou “Follow-up”; deixe vazio se não der para saber. Deixe vazios Data, Vendedor, Lead / empresa, Ticket e as duas colunas finais se não houver evidência; não invente nem marque “não”. Nas notas sem base, deixe a célula vazia e explique a limitação acima. Em Disposição, use uma das oito opções exatas do item 5 ou deixe vazia. Em Onde quebrou, resuma a primeira virada com um trecho curto ou diga que não há evidência. Em Maior qualidade, registre uma força observada. Não inclua a etapa da call como coluna: informe-a apenas na análise.
+
+TRANSCRIÇÃO:
+[cole aqui a transcrição]</pre></div></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">02 / Depois do primeiro resultado</span><h2>Uma call mostra um caso. Várias mostram um padrão.</h2><p class="lead">A primeira análise aponta uma mudança para testar. Depois de algumas conversas, a planilha ajuda a distinguir um caso isolado de um gargalo recorrente.</p><div class="next"><div><span class="eyebrow">Próxima necessidade</span><h2>Acompanhe as próximas calls.</h2></div><div><p>Registre resultado, notas e motivo de perda. Compare os padrões antes de reescrever seu processo de vendas.</p><a class="button button--ghost" href="https://docs.google.com/spreadsheets/d/1yNgCstvet7B_mR0W62WGOGPvvU4x2fWa_PbHemOByMI/copy" target="_blank" rel="noopener">Criar cópia da planilha ↗</a></div></div></div></section>
+</main><footer class="footer"><div class="wrap"><span>Exemplo adaptável da Volcan</span><a href="../../index.html#escolher">Voltar aos três modelos ↗</a></div></footer>
+<script>
+document.getElementById('copyPrompt').addEventListener('click',async()=>{
+  const b=document.getElementById('copyPrompt'),pre=document.getElementById('promptText'),t=pre.textContent;
+  try{await navigator.clipboard.writeText(t);b.textContent='Prompt copiado ✓'}
+  catch(_){const r=document.createRange();r.selectNodeContents(pre);getSelection().removeAllRanges();getSelection().addRange(r);b.textContent='Selecione e copie'}
+  setTimeout(()=>b.textContent='Copiar prompt →',1800);
+});
+</script></body></html>

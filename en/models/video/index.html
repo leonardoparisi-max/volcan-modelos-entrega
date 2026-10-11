@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Video and practice | Volcan template</title><meta name="description" content="Example of a video magnet that leads into a task and a result."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body><header class="nav"><div class="wrap"><a class="brand" href="#inicio">VOLCAN<span>.</span></a><small>Live example · delivery template</small></div></header><main id="inicio">
+<!-- TEMPLATE 03: replace the video, the hands-on task, the result and the next step. -->
+<section class="hero"><div class="wrap hero__grid"><div><span class="eyebrow">Video + task / placeholder example</span><h1>One recording can produce many tests. <em>Plan the combinations.</em></h1><p>Watch the Creative Multiplier demo and build your first matrix of hooks, bodies and CTAs. You leave with the variations worth testing first.</p><a class="button" href="#assistir">Watch and practise →</a><p class="hero__note">A real Volcan video, used here to demonstrate the format. It is not a lesson or a webinar yet.</p></div><aside class="hero__visual"><span class="eyebrow">What you will build</span><b>3 hooks × 2 bodies × 2 CTAs</b><p>A simple matrix turns into up to 12 combinations to weigh up.</p><div class="stat"><strong>12</strong> test possibilities</div><small class="muted">A count of combinations, not a performance promise.</small></aside></div></section>
+<section class="section" id="assistir"><div class="wrap"><span class="eyebrow">01 / Watch</span><h2>See the mechanism at work.</h2><p class="lead">The demo is short. The task below turns what you saw into a concrete plan.</p><div class="panel"><video class="video" controls playsinline preload="metadata" poster="assets/demo-poster.jpg"><source src="assets/creative-multiplier-demo.mp4" type="video/mp4">Your browser does not support this video.</video><p class="muted" style="margin-top:13px">Original Creative Multiplier demo · 35 seconds.</p></div></div></section>
+<section class="section" id="praticar"><div class="wrap"><span class="eyebrow">02 / Do it</span><h2>Build a first matrix.</h2><p class="lead">Write three openings, two bodies and two calls to action. The combinations appear below, ready to pick and test.</p><form id="matrixForm" class="panel"><div class="fields"><div class="field"><label for="hooks">Three hooks, one per line</label><textarea id="hooks" required>Are you losing leads after the DM?
+Does your lead magnet end at the download?
+Is the lead’s first result actually clear?</textarea></div><div class="field"><label for="bodies">Two bodies, one per line</label><textarea id="bodies" required>Show one quick action they can take today.
+Show the before and after of a guided delivery.</textarea></div><div class="field"><label for="ctas">Two CTAs, one per line</label><textarea id="ctas" required>Try the free template.
+See the example page.</textarea></div></div><button class="button" type="submit">Generate combinations →</button></form><div class="result" id="matrixResult" hidden><span class="eyebrow">Your first output</span><strong class="big" id="matrixCount"></strong><p>Pick a few genuinely different combinations to test first. Volume of versions is no substitute for a different idea.</p><div class="matrix-result" id="matrixList"></div></div></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">03 / Keep going</span><h2>From the plan to finished videos.</h2><div class="next"><div><span class="eyebrow">What you need next</span><h2>How do you produce the variations without re-editing everything?</h2></div><div><p>If the combinations made sense, Volcan’s Multiplier organises your recorded clips and generates versions to test. Requires a Mac install.</p><a class="button button--ghost" href="https://multiplier.volcangrowthtech.com.br" target="_blank" rel="noopener">See the Multiplier ↗</a></div></div></div></section>
+</main><footer class="footer"><div class="wrap"><span>Adaptable Volcan example</span><a href="../../index.html#escolher">Back to the three templates ↗</a></div></footer>
+<script>
+document.getElementById('matrixForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const lines=id=>document.getElementById(id).value.split(/\n+/).map(x=>x.trim()).filter(Boolean);
+  const hooks=lines('hooks'),bodies=lines('bodies'),ctas=lines('ctas');
+  if(!hooks.length||!bodies.length||!ctas.length)return;
+  const out=document.getElementById('matrixList');out.replaceChildren();let n=0;
+  for(const h of hooks)for(const b of bodies)for(const c of ctas){n++;const item=document.createElement('div'),index=document.createElement('b');index.textContent=String(n).padStart(2,'0');item.append(index,document.createTextNode(h+' / '+b+' / '+c));out.appendChild(item)}
+  document.getElementById('matrixCount').textContent=n+' combinations';
+  document.getElementById('matrixResult').hidden=false;
+  document.getElementById('matrixResult').scrollIntoView({behavior:'smooth',block:'start'});
+});
+</script></body></html>

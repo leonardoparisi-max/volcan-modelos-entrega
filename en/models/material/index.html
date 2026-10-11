@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sales Call Analyzer | Volcan template</title><meta name="description" content="Example of a magnet that hands over a prompt to use outside the page."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body><header class="nav"><div class="wrap"><a class="brand" href="#inicio">VOLCAN<span>.</span></a><small>Live example · delivery template</small></div></header><main id="inicio">
+<!-- TEMPLATE 02: adapt the resource, the usage instruction, the sample output and the next step. -->
+<section class="hero"><div class="wrap hero__grid"><div><span class="eyebrow">Sales / material used off the page</span><h1>Every call that doesn’t close has a reason. <em>Find yours.</em></h1><p>Copy the prompt, paste your meeting transcript into ChatGPT or Claude, and get an analysis backed by evidence plus one fix to test on the next conversation.</p><a class="button" href="#prompt">Get the free prompt →</a><p class="hero__note">Example based on Volcan’s Sales Call Analyzer.</p></div><aside class="hero__visual"><span class="eyebrow">Sample output</span><b>The solution showed up before the diagnosis.</b><p>“Let me show you everything the platform does. Then we can see if it fits.”</p><div class="stat">Problem <strong>4/10</strong> · Offer <strong>3/10</strong></div><small class="muted">Illustrative example; the real analysis depends on the transcript.</small></aside></div></section>
+<section class="section" id="prompt"><div class="wrap"><span class="eyebrow">01 / First use</span><h2>Run one analysis now.</h2><p class="lead">The resource is the prompt. It is right here, before any sign-up.</p><div class="steps"><article><b>01</b><h3>Grab a transcript</h3><p>Use the text of a recent call from Meet, Zoom, Fireflies or Fathom.</p></article><article><b>02</b><h3>Paste it into your AI</h3><p>Copy the prompt below, replace the last line with your transcript and send it.</p></article><article><b>03</b><h3>Test one fix</h3><p>Pick a single suggestion for the next conversation. Don’t change everything at once.</p></article></div><div class="panel"><span class="eyebrow">The resource</span><h3>Call analysis prompt</h3><p>The full text of the resource Volcan uses today.</p><button class="button" id="copyPrompt" type="button">Copy prompt →</button><pre class="resource-pre" id="promptText">You are a sales director analysing a call transcript. Your job is to show, with evidence from the conversation, what helped or hurt the outcome and which single change to test on the next call.
+
+Use three lenses: (1) diagnostic selling from Leonardo Parisi/Volcan — understand current situation, goal, constraint, consequence and previous attempts before proposing a solution; (2) questioning and objection-prevention principles from Jeremy Miner's NEPQ — help the buyer explain the problem, the impact and the reason to act in their own words; (3) offer clarity and value from Alex Hormozi — connect desired outcome, effort, timeline, risk and next step to what the buyer actually said. These are analytical references, not a mandatory script and not a claim of partnership.
+
+Before scoring, identify whether this was a discovery, demo, diagnosis, proposal, closing or follow-up call. Judge it against the real objective of that stage. Do not penalise a discovery call for not presenting price, or a demo for not repeating the whole diagnosis when the context is already clear.
+
+RULES
+- Do not invent facts, intent, emotion, tone of voice, body language or numbers absent from the transcript. If you only have text, do not assess tonality.
+- Separate evidence (a short, exact quote), interpretation and hypothesis. Where there is no basis for a score or a reason, write “can’t tell”.
+- Analyse the sequence: when an objection appears, also look for the earlier moment where that doubt could have been surfaced. Do not conclude that every objection was caused by the seller.
+- Distinguish call execution, lead qualification, offer clarity, timing and possible misalignment in the messaging that produced the lead. One call suggests hypotheses; a marketing pattern needs several calls.
+- Do not copy stock phrases from experts. Write fresh, natural questions suited to the business in the transcript. Avoid artificial pressure, invented scarcity and promises without proof.
+
+DELIVER IN THIS ORDER
+1. ONE-SENTENCE VERDICT: what most likely explains the outcome, with confidence high, medium or low.
+2. WHAT HAPPENED: 3 to 5 decisive moments in the order they occurred; for each, a short quote and the likely effect.
+3. THREE SCORES to log in the sheet, 0 to 10, or “can’t tell”:
+   - Problem understanding (Macro): current situation, goal, constraint, consequence of not changing, previous attempts and reason to act now; give credit for what was already established in earlier calls when the transcript says so.
+   - Conversation handling (Micro): follow-up questions, listening, confirming understanding, room for the buyer to think out loud, and doubts surfaced before the end.
+   - Offer presentation (Offer): fit between solution and need, expected outcome, the path to get there, effort/risk, decision criteria and next step. Do not demand a guarantee where one makes no sense.
+   For each score, cite one positive piece of evidence and one specific gap. Do not score low just because the sale did not close.
+4. WHERE THE CALL LOST STEAM: the first meaningful turn, with a quote; explain why it matters. If the call closed, or there was no demonstrable turn, say so.
+5. PRIMARY REASON FOR THE SHEET: pick exactly one — “No budget / below ticket”, “Not the decision maker”, “Didn’t understand or believe the offer”, “No urgency”, “Specific objection unresolved”, “Timing”, “Disqualified” or “Closed”. If none is supported, leave the Disposition cell blank and state the missing data under Where it broke. Separate the stated objection from the likely cause; do not present the likely cause as fact.
+6. NEXT CALL: the one highest-impact change, one natural question the seller could ask, and when to use it. If the best next step is a follow-up, say which context to pick back up and what has to be decided.
+7. SIGNAL FOR THE TEAM: what is worth watching on the next calls regarding qualification, pre-meeting content or the offer. Label it a hypothesis until it repeats.
+
+ROW FOR THE LOG TAB OF THE SHEET
+Deliver a single TSV row in a code block, no header, with these tab-separated columns in exactly this order, to paste into the first empty row of the LOG tab (from A5): Date | Rep | Lead / company | Outcome | Ticket ($) | Macro score | Micro score | Offer score | Disposition | Where it broke | Biggest strength | Fix applied? | Follow-up done?. Date as YYYY-MM-DD; ticket and scores as numbers, without $ or /10.
+Use only data explicit in the transcript. For Outcome, use “Closed”, “Not closed” or “Follow-up”; leave it blank if you can’t tell. Leave Date, Rep, Lead / company, Ticket and the last two columns blank where there is no evidence; do not invent and do not mark “no”. For scores without a basis, leave the cell empty and explain the limitation above. For Disposition, use one of the eight exact options from item 5 or leave it blank. For Where it broke, summarise the first turn with a short quote or say there is no evidence. For Biggest strength, record one observed strength. Do not add the call stage as a column: report it in the analysis only.
+
+TRANSCRIPT:
+[paste the transcript here]</pre></div></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">02 / After the first result</span><h2>One call shows a case. Several show a pattern.</h2><p class="lead">The first analysis points to one change worth testing. After a few conversations, the sheet helps you tell an isolated case from a recurring bottleneck.</p><div class="next"><div><span class="eyebrow">What you need next</span><h2>Track the next calls.</h2></div><div><p>Log the outcome, the scores and the reason for the loss. Compare the patterns before you rewrite your sales process.</p><a class="button button--ghost" href="https://docs.google.com/spreadsheets/d/1yNgCstvet7B_mR0W62WGOGPvvU4x2fWa_PbHemOByMI/copy" target="_blank" rel="noopener">Make a copy of the sheet ↗</a></div></div></div></section>
+</main><footer class="footer"><div class="wrap"><span>Adaptable Volcan example</span><a href="../../index.html#escolher">Back to the three templates ↗</a></div></footer>
+<script>
+document.getElementById('copyPrompt').addEventListener('click',async()=>{
+  const b=document.getElementById('copyPrompt'),pre=document.getElementById('promptText'),t=pre.textContent;
+  try{await navigator.clipboard.writeText(t);b.textContent='Prompt copied ✓'}
+  catch(_){const r=document.createRange();r.selectNodeContents(pre);getSelection().removeAllRanges();getSelection().addRange(r);b.textContent='Select and copy'}
+  setTimeout(()=>b.textContent='Copy prompt →',1800);
+});
+</script></body></html>
