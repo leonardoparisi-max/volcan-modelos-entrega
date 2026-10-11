@@ -30,6 +30,8 @@ Dois registros CNAME, no mesmo padrão dos outros subdomínios da Volcan
 | CNAME | `modelos` | `cname.vercel-dns.com` | **DNS only** (nuvem cinza) |
 | CNAME | `models` | `cname.vercel-dns.com` | **DNS only** (nuvem cinza) |
 
+**Feito em 11/10/2026.** Os dois domínios estão no ar.
+
 O proxy da Cloudflare precisa ficar **desligado**, senão a Vercel não consegue
 emitir o certificado.
 
@@ -39,27 +41,28 @@ Conferir depois de propagar:
 vercel domains inspect modelos.volcangrowthtech.com.br
 ```
 
-## Captura de leads
+## Captura de leads — ligada e testada
 
-O formulário grava no Notion via `api/lead.js`, usando o mesmo banco
-"Applications" dos outros lead magnets. **Faltam as variáveis nos dois projetos
-novos** — hoje a API devolve 503 e a página libera a entrega mesmo assim.
+O formulário grava no Notion via `api/lead.js`, no DB compartilhado **"Applications"**
+(o mesmo dos outros lead magnets). `NOTION_API_KEY` e `NOTION_DATABASE_ID` já estão
+nos dois projetos da Vercel, como `sensitive`. Testado em 11/10/2026: lead PT e EN
+entraram no banco com `Lead Magnet = Modelos de Entrega` e o Market correto; as duas
+linhas de teste foram apagadas.
 
-Rode em `pt/` e depois em `en/` (a CLI pede o valor, nada passa por chat):
+**Cuidado ao mexer no `lead.js`:** só escreva propriedades que existem no
+"Applications" (`Name`, `Email`, `Phone`, `Company`, `Lead Magnet`, `Market`).
+Uma propriedade inexistente faz o Notion recusar a página inteira e o lead se perde.
+Foi o que aconteceu com um campo `Notes` na primeira versão.
 
-```bash
-vercel env add NOTION_API_KEY production
-```
+Se a API cair, a página **libera a entrega mesmo assim** — de propósito. A entrega
+nunca fica refém do backend; o custo é perder aquele lead.
 
-```bash
-vercel env add NOTION_DATABASE_ID production
-```
+## Root Directory — não mexer
 
-Os valores são os mesmos já configurados em `volcan-lead-scorecard`. Depois de
-adicionar, rode `vercel deploy --prod --yes` de novo para a função pegar as
-variáveis.
+Cada projeto tem **Root Directory** apontando para a sua pasta (`pt` e `en`). Sem
+isso o Vercel builda da raiz do repo e a home vira 404, com a página caindo em
+`/pt/`. Já aconteceu uma vez. Se alguém recriar os projetos, configurar isso antes.
 
 ## Ainda pendente
 
 - Gravar o vídeo "Como usar" (hoje o bloco está marcado como pendente na página).
-- Card nos dois Lab Hubs apontando para as duas páginas.
